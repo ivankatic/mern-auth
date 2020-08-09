@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import authSvg from '../assets/auth.svg';
 import { ToastContainer, toast } from 'react-toastify';
-import { authenticate, isAuthorized } from '../helpers/auth';
+import { isAuthorized } from '../helpers/auth';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 
@@ -16,7 +16,6 @@ const Register = () => {
 	const { email, name, password1, password2 } = formData;
 
 	const handleChange = (text) => (e) => {
-		console.log(name, email, password1, password2);
 		setFormData({ ...formData, [text]: e.target.value });
 	};
 
